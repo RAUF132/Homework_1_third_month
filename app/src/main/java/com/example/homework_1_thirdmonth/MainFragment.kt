@@ -13,6 +13,8 @@ class MainFragment : Fragment() {
 
     private lateinit var binding: FragmentMainBinding
 
+    private lateinit var carAdapter: CarAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -29,7 +31,56 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
+        val list = listOf(
+            CarModel(
+                "https://t3.ftcdn.net/jpg/01/23/52/24/360_F_123522471_XZe5ebqil1DFJRgOUJ6taDP4DnmHjtL7.jpg",
+                "Car1",
+                "desc"
+            ),
+            CarModel(
+                "https://t3.ftcdn.net/jpg/01/23/52/24/360_F_123522471_XZe5ebqil1DFJRgOUJ6taDP4DnmHjtL7.jpg",
+                "Car2",
+                "desc"
+            ),
+            CarModel(
+                "https://t3.ftcdn.net/jpg/01/23/52/24/360_F_123522471_XZe5ebqil1DFJRgOUJ6taDP4DnmHjtL7.jpg",
+                "Car3",
+                "desc"
+            ),
+            CarModel(
+                "https://t3.ftcdn.net/jpg/01/23/52/24/360_F_123522471_XZe5ebqil1DFJRgOUJ6taDP4DnmHjtL7.jpg",
+                "Car4",
+                "desc"
+            ),
+            CarModel(
+                "https://t3.ftcdn.net/jpg/01/23/52/24/360_F_123522471_XZe5ebqil1DFJRgOUJ6taDP4DnmHjtL7.jpg",
+                "Car5",
+                "desc"
+            ),
+            CarModel(
+                "https://t3.ftcdn.net/jpg/01/23/52/24/360_F_123522471_XZe5ebqil1DFJRgOUJ6taDP4DnmHjtL7.jpg",
+                "Car",
+                "desc"
+            ),
+            CarModel(
+                "https://t3.ftcdn.net/jpg/01/23/52/24/360_F_123522471_XZe5ebqil1DFJRgOUJ6taDP4DnmHjtL7.jpg",
+                "Car",
+                "desc"
+            ),
+            CarModel(
+                "https://t3.ftcdn.net/jpg/01/23/52/24/360_F_123522471_XZe5ebqil1DFJRgOUJ6taDP4DnmHjtL7.jpg",
+                "Car",
+                "desc"
+            ),
+            CarModel(
+                "https://t3.ftcdn.net/jpg/01/23/52/24/360_F_123522471_XZe5ebqil1DFJRgOUJ6taDP4DnmHjtL7.jpg",
+                "Car",
+                "desc"
+            ),
+        )
 
+        carAdapter = CarAdapter(list)
+        binding.rvCar.adapter = carAdapter
     }
 
 

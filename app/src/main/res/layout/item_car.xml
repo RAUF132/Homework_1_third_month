@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/rv_car"
-        android:loyoutManager = "androidx.recyclerview.widget.LinearLayoutManager"/>
 
     <TextView
         android:id="@+id/title"
@@ -22,8 +13,8 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@android:color/holo_blue_dark"
-        android:layout_constraintStart_toStartOf="parent"
-        android:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/price"
@@ -32,17 +23,17 @@
         android:text="€76/day"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:layout_constraintEnd_toEndOf="parent"
-        android:layout_constraintBaseline_toBaselineOf="@+id/title"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/title"/>
 
     <ImageView
         android:id="@+id/carImage"
         android:layout_width="0dp"
         android:layout_height="120dp"
         android:scaleType="fitCenter"
-        android:layout_constraintTop_toBottomOf="@id/title"
-        android:layout_constraintStart_toStartOf="parent"
-        android:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="12dp"/>
 
     <LinearLayout
@@ -50,9 +41,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_constraintTop_toBottomOf="@id/carImage"
-        android:layout_constraintStart_toStartOf="parent"
-        android:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/carImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp">
 
     </LinearLayout>

@@ -1,13 +1,10 @@
 package com.example.homework_1_thirdmonth
 
-import android.R
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.homework_1_thirdmonth.databinding.ItemCarBinding
-
-private val ItemCarBinding.Glide: Any
-
 class CarAdapter(val carList: List<CarModel> ): RecyclerView.Adapter<CarAdapter.CarViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -30,10 +27,11 @@ class CarAdapter(val carList: List<CarModel> ): RecyclerView.Adapter<CarAdapter.
 
     class CarViewHolder(private val binding: ItemCarBinding) : RecyclerView.ViewHolder(binding.root){
         fun onBind(carModel: CarModel){
-            binding.
 
+            Glide.with(binding.carImage).load(carModel.img).into(binding.carImage)
 
-            Glide.with(binding.carImage).load(carModel.img).into(binding.)
+            binding.price.text = carModel.price
+            binding.title.text = carModel.title
         }
 
     }
